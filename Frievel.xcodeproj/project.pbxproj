@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0580D41A1FA4597FE274395D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37535F07F34069122A75F0EF /* libPods.a */; };
+		50E97E3D1BF29D93008143D5 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E97E3C1BF29D93008143D5 /* Storyboard.storyboard */; };
+		50E97E3F1BF2A14B008143D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E97E3E1BF2A14B008143D5 /* LoginViewController.swift */; };
 		50FCD0B31BEE426D001A7BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCD0B21BEE426D001A7BC0 /* AppDelegate.swift */; };
 		50FCD0B51BEE426D001A7BC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCD0B41BEE426D001A7BC0 /* ViewController.swift */; };
 		50FCD0B81BEE426D001A7BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0B61BEE426D001A7BC0 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		37535F07F34069122A75F0EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		50E97E3C1BF29D93008143D5 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		50E97E3E1BF2A14B008143D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		50FCD0AF1BEE426D001A7BC0 /* Frievel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frievel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FCD0B21BEE426D001A7BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50FCD0B41BEE426D001A7BC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +67,9 @@
 			children = (
 				50FCD0B21BEE426D001A7BC0 /* AppDelegate.swift */,
 				50FCD0B41BEE426D001A7BC0 /* ViewController.swift */,
+				50E97E3E1BF2A14B008143D5 /* LoginViewController.swift */,
 				50FCD0B61BEE426D001A7BC0 /* Main.storyboard */,
+				50E97E3C1BF29D93008143D5 /* Storyboard.storyboard */,
 				50FCD0B91BEE426D001A7BC0 /* Assets.xcassets */,
 				50FCD0BB1BEE426D001A7BC0 /* LaunchScreen.storyboard */,
 				50FCD0BE1BEE426D001A7BC0 /* Info.plist */,
@@ -150,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50FCD0BD1BEE426D001A7BC0 /* LaunchScreen.storyboard in Resources */,
+				50E97E3D1BF29D93008143D5 /* Storyboard.storyboard in Resources */,
 				50FCD0BA1BEE426D001A7BC0 /* Assets.xcassets in Resources */,
 				50FCD0B81BEE426D001A7BC0 /* Main.storyboard in Resources */,
 			);
@@ -195,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E97E3F1BF2A14B008143D5 /* LoginViewController.swift in Sources */,
 				50FCD0B51BEE426D001A7BC0 /* ViewController.swift in Sources */,
 				50FCD0B31BEE426D001A7BC0 /* AppDelegate.swift in Sources */,
 			);
@@ -311,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Frievel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Maxim-Galayko.Frievel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -323,6 +332,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Frievel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Maxim-Galayko.Frievel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
