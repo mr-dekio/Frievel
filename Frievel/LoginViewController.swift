@@ -12,7 +12,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var scrollContentView: UIScrollView!
     
+    @IBOutlet weak var keyboardBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,28 +47,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Keyboard
     
     func registerForKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-    }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "adjustKeyboardFrame:", name: UIKeyboardDidShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "adjustKeyboardFrame:", name: UIKeyboardWillChangeFrameNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "adjustKeyboardFrame:", name: UIKeyboardWillHideNotification, object: nil)
+        }
     
     func unregisterForKeyboardNotifications() {
-        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    func keyboardDidShow(notification: NSNotification) {
+    func adjustKeyboardFrame(notification: NSNotification) {
         let notificationInfo = notification.userInfo
         guard let userInfo = notificationInfo else { return }
         
-        let size = userInfo[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue.size
-        if let size = size {
-            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: size.height, right: 0)
-            print(contentInset)
+        if (notification.name == UIKeyboardWillHideNotification) {
+            keyboardBottomConstraint.constant = 0
+        } else {
+            let size = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue.size
+            if let size = size {
+                keyboardBottomConstraint.constant = size.height
+            }
+        }
+        
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.view.layoutIfNeeded()
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        
-    }
     
     // MARK: - UITextFieldDelegate
     
