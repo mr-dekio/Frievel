@@ -13,6 +13,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var scrollContentView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var keyboardBottomConstraint: NSLayoutConstraint!
     
@@ -20,6 +21,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         registerForKeyboardNotifications()
+        
+        setupAppearance()
 
         loginField.delegate = self
         passwordField.delegate = self
@@ -32,6 +35,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     deinit {
         unregisterForKeyboardNotifications()
+    }
+    
+    // MARK: - Appearance
+    
+    func setupAppearance() {
+        view.backgroundColor = UIColor(patternImage: UIImage(named: backgroundImageName)!)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     // MARK: - Authorization & Login

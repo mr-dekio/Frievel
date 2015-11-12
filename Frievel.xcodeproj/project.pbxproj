@@ -13,6 +13,10 @@
 		50E97E411BF333B5008143D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E97E401BF333B5008143D5 /* MainViewController.swift */; };
 		50E97E431BF33D60008143D5 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E97E421BF33D60008143D5 /* UserProfile.swift */; };
 		50E97E461BF341BF008143D5 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E97E451BF341BF008143D5 /* FriendCollectionViewCell.swift */; };
+		50E97E4B1BF38A8F008143D5 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50E97E4A1BF38A8F008143D5 /* background.jpg */; };
+		50E97E4D1BF38F36008143D5 /* autumn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50E97E4C1BF38F36008143D5 /* autumn.jpg */; };
+		50E97E501BF3907F008143D5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E97E4F1BF3907F008143D5 /* Config.swift */; };
+		50E97E521BF397DA008143D5 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E97E511BF397DA008143D5 /* UserDetailsViewController.swift */; };
 		50FCD0B31BEE426D001A7BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCD0B21BEE426D001A7BC0 /* AppDelegate.swift */; };
 		50FCD0B51BEE426D001A7BC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCD0B41BEE426D001A7BC0 /* ViewController.swift */; };
 		50FCD0B81BEE426D001A7BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0B61BEE426D001A7BC0 /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 		50E97E401BF333B5008143D5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		50E97E421BF33D60008143D5 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		50E97E451BF341BF008143D5 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		50E97E4A1BF38A8F008143D5 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		50E97E4C1BF38F36008143D5 /* autumn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = autumn.jpg; sourceTree = "<group>"; };
+		50E97E4F1BF3907F008143D5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		50E97E511BF397DA008143D5 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		50FCD0AF1BEE426D001A7BC0 /* Frievel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frievel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FCD0B21BEE426D001A7BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50FCD0B41BEE426D001A7BC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +66,42 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		50E97E471BF35B7B008143D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50E97E421BF33D60008143D5 /* UserProfile.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		50E97E481BF35B8A008143D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50FCD0B41BEE426D001A7BC0 /* ViewController.swift */,
+				50E97E3E1BF2A14B008143D5 /* LoginViewController.swift */,
+				50E97E401BF333B5008143D5 /* MainViewController.swift */,
+				50E97E511BF397DA008143D5 /* UserDetailsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		50E97E491BF38A7D008143D5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				50E97E4C1BF38F36008143D5 /* autumn.jpg */,
+				50E97E4A1BF38A8F008143D5 /* background.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		50E97E4E1BF39065008143D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				50E97E4F1BF3907F008143D5 /* Config.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		50FCD0A61BEE426D001A7BC0 = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +123,12 @@
 		50FCD0B11BEE426D001A7BC0 /* Frievel */ = {
 			isa = PBXGroup;
 			children = (
+				50E97E491BF38A7D008143D5 /* Images */,
+				50E97E4E1BF39065008143D5 /* Helpers */,
+				50E97E471BF35B7B008143D5 /* Models */,
+				50E97E481BF35B8A008143D5 /* Controllers */,
 				50E97E441BF341A0008143D5 /* Cells */,
 				50FCD0B21BEE426D001A7BC0 /* AppDelegate.swift */,
-				50FCD0B41BEE426D001A7BC0 /* ViewController.swift */,
-				50E97E3E1BF2A14B008143D5 /* LoginViewController.swift */,
-				50E97E401BF333B5008143D5 /* MainViewController.swift */,
-				50E97E421BF33D60008143D5 /* UserProfile.swift */,
 				50FCD0B61BEE426D001A7BC0 /* Main.storyboard */,
 				50E97E3C1BF29D93008143D5 /* Storyboard.storyboard */,
 				50FCD0B91BEE426D001A7BC0 /* Assets.xcassets */,
@@ -174,7 +218,9 @@
 			files = (
 				50FCD0BD1BEE426D001A7BC0 /* LaunchScreen.storyboard in Resources */,
 				50E97E3D1BF29D93008143D5 /* Storyboard.storyboard in Resources */,
+				50E97E4B1BF38A8F008143D5 /* background.jpg in Resources */,
 				50FCD0BA1BEE426D001A7BC0 /* Assets.xcassets in Resources */,
+				50E97E4D1BF38F36008143D5 /* autumn.jpg in Resources */,
 				50FCD0B81BEE426D001A7BC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,8 +268,10 @@
 				50E97E461BF341BF008143D5 /* FriendCollectionViewCell.swift in Sources */,
 				50E97E3F1BF2A14B008143D5 /* LoginViewController.swift in Sources */,
 				50FCD0B51BEE426D001A7BC0 /* ViewController.swift in Sources */,
+				50E97E501BF3907F008143D5 /* Config.swift in Sources */,
 				50E97E431BF33D60008143D5 /* UserProfile.swift in Sources */,
 				50FCD0B31BEE426D001A7BC0 /* AppDelegate.swift in Sources */,
+				50E97E521BF397DA008143D5 /* UserDetailsViewController.swift in Sources */,
 				50E97E411BF333B5008143D5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

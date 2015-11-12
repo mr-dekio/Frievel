@@ -9,5 +9,15 @@
 import UIKit
 
 class FriendCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    override func awakeFromNib() {
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
     
 }

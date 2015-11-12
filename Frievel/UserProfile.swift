@@ -14,6 +14,11 @@ class UserProfile: NSObject {
     var surname: String?
     var photo: UIImage?
     
+    var fullname: String {
+        guard let surname = surname else { return name }
+        return name + " " + surname
+    }
+    
     init(name: String) {
         self.name = name
     }
