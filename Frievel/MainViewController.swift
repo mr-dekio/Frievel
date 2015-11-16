@@ -55,10 +55,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         let reuseIdentifier = "friendsCollectionCell"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FriendCollectionViewCell
         
-        let currentFriend = friendsList[indexPath.row]
-        
-        cell.imageView.image = currentFriend.photo
-        cell.nameLabel.text = currentFriend.fullname
+//        let currentFriend = friendsList[indexPath.row]
+//        
+//        cell.imageView.image = currentFriend.photo
+//        cell.nameLabel.text = currentFriend.fullname
         
         return cell
     }
