@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5002F3A01C176AA900E0CCE9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5002F39F1C176AA900E0CCE9 /* SignupViewController.swift */; };
 		50E97E3D1BF29D93008143D5 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E97E3C1BF29D93008143D5 /* Storyboard.storyboard */; };
 		50E97E3F1BF2A14B008143D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E97E3E1BF2A14B008143D5 /* LoginViewController.swift */; };
 		50E97E411BF333B5008143D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E97E401BF333B5008143D5 /* MainViewController.swift */; };
@@ -21,17 +22,18 @@
 		50FCD0B81BEE426D001A7BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0B61BEE426D001A7BC0 /* Main.storyboard */; };
 		50FCD0BA1BEE426D001A7BC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0B91BEE426D001A7BC0 /* Assets.xcassets */; };
 		50FCD0BD1BEE426D001A7BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0BB1BEE426D001A7BC0 /* LaunchScreen.storyboard */; };
-		D7169C481C16E14C0024FE4A /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		D7169C4A1C16E7480024FE4A /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C491C16E7480024FE4A /* TripCell.swift */; settings = {ASSET_TAGS = (); }; };
-		D7169C4C1C1742530024FE4A /* TripRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4B1C1742530024FE4A /* TripRecord.swift */; settings = {ASSET_TAGS = (); }; };
-		D7169C4E1C1743A20024FE4A /* TripRecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4D1C1743A20024FE4A /* TripRecordsManager.swift */; settings = {ASSET_TAGS = (); }; };
-		D7169C501C17443C0024FE4A /* DataWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4F1C17443C0024FE4A /* DataWarehouse.swift */; settings = {ASSET_TAGS = (); }; };
-		D7169C521C174E2D0024FE4A /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C511C174E2D0024FE4A /* AppManager.swift */; settings = {ASSET_TAGS = (); }; };
-		D7169C541C174F3F0024FE4A /* PasswordAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C531C174F3F0024FE4A /* PasswordAuthenticator.swift */; settings = {ASSET_TAGS = (); }; };
-		D728D68F1C15FFDE00764A8C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728D68E1C15FFDE00764A8C /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D7169C481C16E14C0024FE4A /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */; };
+		D7169C4A1C16E7480024FE4A /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C491C16E7480024FE4A /* TripCell.swift */; };
+		D7169C4C1C1742530024FE4A /* TripRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4B1C1742530024FE4A /* TripRecord.swift */; };
+		D7169C4E1C1743A20024FE4A /* TripRecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4D1C1743A20024FE4A /* TripRecordsManager.swift */; };
+		D7169C501C17443C0024FE4A /* DataWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4F1C17443C0024FE4A /* DataWarehouse.swift */; };
+		D7169C521C174E2D0024FE4A /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C511C174E2D0024FE4A /* AppManager.swift */; };
+		D7169C541C174F3F0024FE4A /* PasswordAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C531C174F3F0024FE4A /* PasswordAuthenticator.swift */; };
+		D728D68F1C15FFDE00764A8C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728D68E1C15FFDE00764A8C /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5002F39F1C176AA900E0CCE9 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		50E97E3C1BF29D93008143D5 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		50E97E3E1BF2A14B008143D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		50E97E401BF333B5008143D5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				50E97E401BF333B5008143D5 /* MainViewController.swift */,
 				50E97E511BF397DA008143D5 /* UserDetailsViewController.swift */,
 				D728D68E1C15FFDE00764A8C /* SearchViewController.swift */,
+				5002F39F1C176AA900E0CCE9 /* SignupViewController.swift */,
 				D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */,
 			);
 			name = Controllers;
@@ -241,6 +244,7 @@
 				D7169C481C16E14C0024FE4A /* ShowTableViewController.swift in Sources */,
 				D7169C4A1C16E7480024FE4A /* TripCell.swift in Sources */,
 				50E97E501BF3907F008143D5 /* Config.swift in Sources */,
+				5002F3A01C176AA900E0CCE9 /* SignupViewController.swift in Sources */,
 				D7169C501C17443C0024FE4A /* DataWarehouse.swift in Sources */,
 				50E97E431BF33D60008143D5 /* UserProfile.swift in Sources */,
 				50FCD0B31BEE426D001A7BC0 /* AppDelegate.swift in Sources */,
