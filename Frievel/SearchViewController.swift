@@ -13,6 +13,8 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     var countryArray = [String]()
     var selectedCounty: String?
     
+    @IBOutlet weak var stackView: UIStackView!
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -23,6 +25,11 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.navigationBarHidden = false
+        setPickerView()
+    }
+    
+    func setPickerView() {
         let locale = NSLocale.currentLocale()
         let array = NSLocale.ISOCountryCodes()
         
@@ -41,5 +48,31 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         selectedCounty = countryArray[row]
     }
     
+    @IBAction func AdvancedSerachValueChanged(sender: AnyObject) {
+        let advancedSearch = sender as! UISwitch
+        
+        if advancedSearch.on {
+            enableAllSubviews(view: stackView, enabled: true)
+        } else {
+            enableAllSubviews(view: stackView, enabled: false)
+        }
+    }
+    
+    func enableAllSubviews(view view: UIView, enabled: Bool) {
+        for view in view.subviews {
+            if view.subviews.count > 0 {
+                enableAllSubviews(view: view, enabled: enabled)
+            }
+            
+            if let label = view as? UILabel {
+                label.enabled = enabled
+            }
+            
+            if let uiSwitch = view as? UISwitch {
+                uiSwitch.enabled = enabled
+            }
+        }
+
+    }
     
 }

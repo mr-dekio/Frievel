@@ -21,8 +21,9 @@
 		50FCD0B81BEE426D001A7BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0B61BEE426D001A7BC0 /* Main.storyboard */; };
 		50FCD0BA1BEE426D001A7BC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0B91BEE426D001A7BC0 /* Assets.xcassets */; };
 		50FCD0BD1BEE426D001A7BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0BB1BEE426D001A7BC0 /* LaunchScreen.storyboard */; };
+		D7169C481C16E14C0024FE4A /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D7169C4A1C16E7480024FE4A /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C491C16E7480024FE4A /* TripCell.swift */; settings = {ASSET_TAGS = (); }; };
 		D728D68F1C15FFDE00764A8C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728D68E1C15FFDE00764A8C /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		D728D6911C16000E00764A8C /* AdvancedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728D6901C16000E00764A8C /* AdvancedSearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +43,9 @@
 		50FCD0B91BEE426D001A7BC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50FCD0BC1BEE426D001A7BC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50FCD0BE1BEE426D001A7BC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableViewController.swift; sourceTree = "<group>"; };
+		D7169C491C16E7480024FE4A /* TripCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
 		D728D68E1C15FFDE00764A8C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		D728D6901C16000E00764A8C /* AdvancedSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		50E97E441BF341A0008143D5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D7169C491C16E7480024FE4A /* TripCell.swift */,
 				50E97E451BF341BF008143D5 /* FriendCollectionViewCell.swift */,
 			);
 			name = Cells;
@@ -81,7 +84,7 @@
 				50E97E401BF333B5008143D5 /* MainViewController.swift */,
 				50E97E511BF397DA008143D5 /* UserDetailsViewController.swift */,
 				D728D68E1C15FFDE00764A8C /* SearchViewController.swift */,
-				D728D6901C16000E00764A8C /* AdvancedSearchViewController.swift */,
+				D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -212,11 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D728D6911C16000E00764A8C /* AdvancedSearchViewController.swift in Sources */,
 				50E97E461BF341BF008143D5 /* FriendCollectionViewCell.swift in Sources */,
 				50E97E3F1BF2A14B008143D5 /* LoginViewController.swift in Sources */,
 				50FCD0B51BEE426D001A7BC0 /* ViewController.swift in Sources */,
 				D728D68F1C15FFDE00764A8C /* SearchViewController.swift in Sources */,
+				D7169C481C16E14C0024FE4A /* ShowTableViewController.swift in Sources */,
+				D7169C4A1C16E7480024FE4A /* TripCell.swift in Sources */,
 				50E97E501BF3907F008143D5 /* Config.swift in Sources */,
 				50E97E431BF33D60008143D5 /* UserProfile.swift in Sources */,
 				50FCD0B31BEE426D001A7BC0 /* AppDelegate.swift in Sources */,
@@ -336,10 +340,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Frievel/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AG.Frievel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,10 +354,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Frievel/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AG.Frievel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -19,10 +19,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBarHidden = true
         
         registerForKeyboardNotifications()
-        
-        setupAppearance()
 
         loginField.delegate = self
         passwordField.delegate = self
@@ -37,20 +36,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         unregisterForKeyboardNotifications()
     }
     
-    // MARK: - Appearance
-    
-    func setupAppearance() {
-        view.backgroundColor = UIColor(patternImage: UIImage(named: backgroundImageName)!)
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
-    
     // MARK: - Authorization & Login
     
     @IBAction func loginUser(sender: AnyObject) {
-        
     }
 
     @IBAction func signUpUser(sender: AnyObject) {

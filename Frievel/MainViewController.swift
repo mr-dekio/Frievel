@@ -16,15 +16,22 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var friendsCollectionView: UICollectionView!
     
-    var friendsList: [UserProfile] = []
+    private (set) var friendsList = [UserProfile]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         photoImageView.layer.cornerRadius = photoImageView.frame.size.width / 2
         
         setupFriendsCollectionViewFlowLayout()
         setupAppearance()
+        
+        generateFriends()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,30 +42,24 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     // MARK: - Appearance
     
     func setupAppearance() {
-        view.backgroundColor = UIColor(patternImage: UIImage(named: backgroundImageName)!)
-        
         friendsCollectionView.layer.borderColor = UIColor.whiteColor().CGColor
         friendsCollectionView.layer.borderWidth = 1
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
     }
     
     // MARK: - UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10 // friendsList.count
+        return friendsList.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let reuseIdentifier = "friendsCollectionCell"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FriendCollectionViewCell
         
-//        let currentFriend = friendsList[indexPath.row]
-//        
-//        cell.imageView.image = currentFriend.photo
-//        cell.nameLabel.text = currentFriend.fullname
+        let currentFriend = friendsList[indexPath.row]
+        
+        cell.imageView.image = UIImage(named: "user")
+        cell.nameLabel.text = currentFriend.name
         
         return cell
     }
@@ -92,4 +93,14 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     */
 
+}
+
+extension MainViewController {
+    func generateFriends() {
+        let names = ["Andrew", "Victor", "Max", "Roman", "Sergiy"]
+        
+        for name in names {
+            friendsList.append(UserProfile(name: name))
+        }
+    }
 }

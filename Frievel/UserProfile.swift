@@ -24,3 +24,25 @@ class UserProfile: NSObject {
     }
 
 }
+
+class TripPresenter {
+    private (set) var title: String
+    private (set) var shorttDescription: String
+    private (set) var image: String
+    private (set) var budget: Int
+    
+    private (set) var rating: Int
+    private (set) var numberOfComments: Int
+    
+    private (set) var user: UserProfile
+    
+    init(title: String, shorttDescription: String,image: String,rating: Int,numberOfComments: Int,user: UserProfile, budget: Int) {
+        self.title = title
+        self.shorttDescription = shorttDescription
+        self.rating = rating
+        self.numberOfComments = numberOfComments
+        self.user = user
+        self.image = image
+        self.budget = budget
+    }
+}

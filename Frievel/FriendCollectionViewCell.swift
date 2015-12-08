@@ -13,11 +13,12 @@ class FriendCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
-        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.grayColor().CGColor
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
     }
-    
+
 }
