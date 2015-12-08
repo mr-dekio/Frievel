@@ -23,6 +23,11 @@
 		50FCD0BD1BEE426D001A7BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FCD0BB1BEE426D001A7BC0 /* LaunchScreen.storyboard */; };
 		D7169C481C16E14C0024FE4A /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D7169C4A1C16E7480024FE4A /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C491C16E7480024FE4A /* TripCell.swift */; settings = {ASSET_TAGS = (); }; };
+		D7169C4C1C1742530024FE4A /* TripRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4B1C1742530024FE4A /* TripRecord.swift */; settings = {ASSET_TAGS = (); }; };
+		D7169C4E1C1743A20024FE4A /* TripRecordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4D1C1743A20024FE4A /* TripRecordsManager.swift */; settings = {ASSET_TAGS = (); }; };
+		D7169C501C17443C0024FE4A /* DataWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4F1C17443C0024FE4A /* DataWarehouse.swift */; settings = {ASSET_TAGS = (); }; };
+		D7169C521C174E2D0024FE4A /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C511C174E2D0024FE4A /* AppManager.swift */; settings = {ASSET_TAGS = (); }; };
+		D7169C541C174F3F0024FE4A /* PasswordAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C531C174F3F0024FE4A /* PasswordAuthenticator.swift */; settings = {ASSET_TAGS = (); }; };
 		D728D68F1C15FFDE00764A8C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728D68E1C15FFDE00764A8C /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,11 @@
 		50FCD0BE1BEE426D001A7BC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableViewController.swift; sourceTree = "<group>"; };
 		D7169C491C16E7480024FE4A /* TripCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
+		D7169C4B1C1742530024FE4A /* TripRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripRecord.swift; sourceTree = "<group>"; };
+		D7169C4D1C1743A20024FE4A /* TripRecordsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripRecordsManager.swift; sourceTree = "<group>"; };
+		D7169C4F1C17443C0024FE4A /* DataWarehouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWarehouse.swift; sourceTree = "<group>"; };
+		D7169C511C174E2D0024FE4A /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		D7169C531C174F3F0024FE4A /* PasswordAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticator.swift; sourceTree = "<group>"; };
 		D728D68E1C15FFDE00764A8C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				50E97E421BF33D60008143D5 /* UserProfile.swift */,
+				D7169C4B1C1742530024FE4A /* TripRecord.swift */,
+				D7169C4D1C1743A20024FE4A /* TripRecordsManager.swift */,
+				D7169C511C174E2D0024FE4A /* AppManager.swift */,
+				D7169C531C174F3F0024FE4A /* PasswordAuthenticator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -136,6 +150,7 @@
 				50FCD0B91BEE426D001A7BC0 /* Assets.xcassets */,
 				50FCD0BB1BEE426D001A7BC0 /* LaunchScreen.storyboard */,
 				50FCD0BE1BEE426D001A7BC0 /* Info.plist */,
+				D7169C4F1C17443C0024FE4A /* DataWarehouse.swift */,
 			);
 			path = Frievel;
 			sourceTree = "<group>";
@@ -215,13 +230,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7169C4C1C1742530024FE4A /* TripRecord.swift in Sources */,
+				D7169C4E1C1743A20024FE4A /* TripRecordsManager.swift in Sources */,
 				50E97E461BF341BF008143D5 /* FriendCollectionViewCell.swift in Sources */,
 				50E97E3F1BF2A14B008143D5 /* LoginViewController.swift in Sources */,
+				D7169C541C174F3F0024FE4A /* PasswordAuthenticator.swift in Sources */,
 				50FCD0B51BEE426D001A7BC0 /* ViewController.swift in Sources */,
 				D728D68F1C15FFDE00764A8C /* SearchViewController.swift in Sources */,
+				D7169C521C174E2D0024FE4A /* AppManager.swift in Sources */,
 				D7169C481C16E14C0024FE4A /* ShowTableViewController.swift in Sources */,
 				D7169C4A1C16E7480024FE4A /* TripCell.swift in Sources */,
 				50E97E501BF3907F008143D5 /* Config.swift in Sources */,
+				D7169C501C17443C0024FE4A /* DataWarehouse.swift in Sources */,
 				50E97E431BF33D60008143D5 /* UserProfile.swift in Sources */,
 				50FCD0B31BEE426D001A7BC0 /* AppDelegate.swift in Sources */,
 				50E97E521BF397DA008143D5 /* UserDetailsViewController.swift in Sources */,

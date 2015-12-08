@@ -11,7 +11,7 @@ import UIKit
 class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var countryPicker: UIPickerView!
     var countryArray = [String]()
-    var selectedCounty: String?
+    var selectedCounty: String = "All countries"
     
     @IBOutlet weak var stackView: UIStackView!
     
@@ -38,6 +38,7 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             countryArray.append(display!)
         }
         countryArray.sortInPlace()
+        countryArray[0] = "All countries"
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -50,11 +51,54 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @IBAction func AdvancedSerachValueChanged(sender: AnyObject) {
         let advancedSearch = sender as! UISwitch
-        
+        isAdvancedOn = advancedSearch.on
         if advancedSearch.on {
             enableAllSubviews(view: stackView, enabled: true)
         } else {
             enableAllSubviews(view: stackView, enabled: false)
+        }
+    }
+    @IBOutlet weak var hotelSwitch: UISwitch!
+    @IBOutlet weak var foodSwitch: UISwitch!
+    @IBOutlet weak var entertainmentSwitch: UISwitch!
+    
+    var isAdvancedOn = false
+    var searchCriteria = SearchCriterias()
+    
+    @IBAction func searching() {
+        if selectedCounty == "All countries" {
+            searchCriteria.country = nil
+        }
+
+        searchCriteria.advancedSearch = isAdvancedOn
+        
+        if isAdvancedOn {
+            searchCriteria.includesFood = foodSwitch.on
+            searchCriteria.includesHotel = hotelSwitch.on
+            searchCriteria.includesEntertainment = entertainmentSwitch.on
+        }
+        performSegueWithIdentifier("Show", sender: self)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let myTripsVC = segue.destinationViewController as? ShowTableViewController {
+            myTripsVC.records =  DataWarehouse.loadTripRecords().filter({
+                let record = $0
+                
+                var countryMatched = searchCriteria.country == nil ? true : record.searchCriterias.country == searchCriteria.country
+                
+                if !searchCriteria.advancedSearch {
+                    return true
+                }
+                if record.searchCriterias.includesHotel == searchCriteria.includesHotel &&
+                    record.searchCriterias.includesFood == searchCriteria.includesFood &&
+                    record.searchCriterias.includesEntertainment == searchCriteria.includesEntertainment {
+                        return countryMatched
+                }
+                
+                return false
+            })
         }
     }
     

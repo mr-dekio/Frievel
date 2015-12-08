@@ -23,3 +23,11 @@ class ViewController: UIViewController {
 
 }
 
+
+extension UIViewController {
+    func showAlertMessageWith(title title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+}

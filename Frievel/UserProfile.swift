@@ -8,41 +8,39 @@
 
 import UIKit
 
-class UserProfile: NSObject {
+
+class UserCredentials {
+    var username: String
+    var password: String
+    var email: String
     
+    init (username: String, password: String, email: String) {
+        self.username = username
+        self.password = password
+        self.email = email
+    }
+}
+
+class UserProfile: NSObject {
     var name: String = ""
     var surname: String?
-    var photo: UIImage?
+    var avatar: UIImage?
+    var level: Int
+    var rating: Int
+    var credentials: UserCredentials
     
     var fullname: String {
         guard let surname = surname else { return name }
         return name + " " + surname
     }
     
-    init(name: String) {
+    init(name: String, surname: String, avatar: UIImage?, level: Int, rating: Int, credentials: UserCredentials) {
         self.name = name
-    }
-
-}
-
-class TripPresenter {
-    private (set) var title: String
-    private (set) var shorttDescription: String
-    private (set) var image: String
-    private (set) var budget: Int
-    
-    private (set) var rating: Int
-    private (set) var numberOfComments: Int
-    
-    private (set) var user: UserProfile
-    
-    init(title: String, shorttDescription: String,image: String,rating: Int,numberOfComments: Int,user: UserProfile, budget: Int) {
-        self.title = title
-        self.shorttDescription = shorttDescription
+        self.surname = surname
+        self.avatar = avatar ?? UIImage(named: "user")
+        self.level = level
         self.rating = rating
-        self.numberOfComments = numberOfComments
-        self.user = user
-        self.image = image
-        self.budget = budget
+        self.credentials = credentials
     }
+
 }

@@ -12,9 +12,12 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var surnameLabel: UILabel!
+    
+    @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var friendsCollectionView: UICollectionView!
+    
+    let currentUser = AppManager.sharedInstance.currentUser!
     
     private (set) var friendsList = [UserProfile]()
     
@@ -25,7 +28,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         setupFriendsCollectionViewFlowLayout()
         setupAppearance()
         
-        generateFriends()
+        nameLabel.text = currentUser.name
+        photoImageView.image = currentUser.avatar
+        levelLabel.text = "\(currentUser.level)"
+        rating.text = "\(currentUser.rating)"
+        
+        
+        friendsList = DataWarehouse.loadUsers()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -83,24 +92,25 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let myTripsVC = segue.destinationViewController as? ShowTableViewController {
+            myTripsVC.records =  DataWarehouse.loadTripRecords().filter({
+                $0.user.name == currentUser.name
+            })
+        }
     }
-    */
+
 
 }
 
 extension MainViewController {
     func generateFriends() {
-        let names = ["Andrew", "Victor", "Max", "Roman", "Sergiy"]
-        
-        for name in names {
-            friendsList.append(UserProfile(name: name))
-        }
+//        let names = ["Andrew", "Victor", "Max", "Roman", "Sergiy"]
+//        
+//        for name in names {
+//            friendsList.append(UserProfile(name: name))
+//        }
     }
 }

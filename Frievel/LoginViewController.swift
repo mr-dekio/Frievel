@@ -39,6 +39,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Authorization & Login
     
     @IBAction func loginUser(sender: AnyObject) {
+        if loginField.text?.isEmpty ?? true || passwordField.text?.isEmpty ?? true {
+            showAlertMessageWith(title: "Error", message: "One or more fields is empty")
+            return
+        }
+        
+        if let username = loginField.text, let password = passwordField.text{
+            
+            if let userProfile = PasswordAuthenticator().authenticate(username, password: password) {
+                AppManager.sharedInstance.currentUser = userProfile
+                performSegueWithIdentifier("Main", sender: self)
+                return
+            }
+            
+        }
+
+        showAlertMessageWith(title: "Error", message: "Unknown error")
     }
 
     @IBAction func signUpUser(sender: AnyObject) {
