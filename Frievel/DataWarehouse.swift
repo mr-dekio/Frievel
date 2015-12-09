@@ -9,17 +9,6 @@
 import UIKit
 
 
-class UserManager {
-    var users: [UserProfile]!
-    
-    static let sharedInstance = UserManager()
-    
-    private init() {
-        users = [UserProfile]()
-        users.appendContentsOf(DataWarehouse.loadUsers())
-    }
-}
-
 class DataWarehouse {
     
     static func loadUsers() -> [UserProfile] {

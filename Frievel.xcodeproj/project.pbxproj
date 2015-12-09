@@ -29,6 +29,7 @@
 		D7169C501C17443C0024FE4A /* DataWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C4F1C17443C0024FE4A /* DataWarehouse.swift */; };
 		D7169C521C174E2D0024FE4A /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C511C174E2D0024FE4A /* AppManager.swift */; };
 		D7169C541C174F3F0024FE4A /* PasswordAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C531C174F3F0024FE4A /* PasswordAuthenticator.swift */; };
+		D7169C561C1876D30024FE4A /* DetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7169C551C1876D30024FE4A /* DetailedInformationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D728D68F1C15FFDE00764A8C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728D68E1C15FFDE00764A8C /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		D7169C4F1C17443C0024FE4A /* DataWarehouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWarehouse.swift; sourceTree = "<group>"; };
 		D7169C511C174E2D0024FE4A /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		D7169C531C174F3F0024FE4A /* PasswordAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticator.swift; sourceTree = "<group>"; };
+		D7169C551C1876D30024FE4A /* DetailedInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedInformationViewController.swift; sourceTree = "<group>"; };
 		D728D68E1C15FFDE00764A8C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				D728D68E1C15FFDE00764A8C /* SearchViewController.swift */,
 				5002F39F1C176AA900E0CCE9 /* SignupViewController.swift */,
 				D7169C471C16E14C0024FE4A /* ShowTableViewController.swift */,
+				D7169C551C1876D30024FE4A /* DetailedInformationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				50FCD0B31BEE426D001A7BC0 /* AppDelegate.swift in Sources */,
 				50E97E521BF397DA008143D5 /* UserDetailsViewController.swift in Sources */,
 				50E97E411BF333B5008143D5 /* MainViewController.swift in Sources */,
+				D7169C561C1876D30024FE4A /* DetailedInformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

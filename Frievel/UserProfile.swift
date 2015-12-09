@@ -8,6 +8,16 @@
 
 import UIKit
 
+class UserManager {
+    var users: [UserProfile]!
+    
+    static let sharedInstance = UserManager()
+    
+    private init() {
+        users = [UserProfile]()
+        users.appendContentsOf(DataWarehouse.loadUsers())
+    }
+}
 
 class UserCredentials {
     var username: String

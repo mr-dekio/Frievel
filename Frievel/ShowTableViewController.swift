@@ -35,8 +35,15 @@ class ShowTableViewController: UITableViewController {
         return cell
     }
     
+    var selectedRecord: TripRecord?
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
+        selectedRecord = records[indexPath.row]
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let detailed = segue.destinationViewController as? DetailedInformationViewController {
+            detailed.record = records[tableView.indexPathForSelectedRow?.row ?? 0]
+        }
     }
 }
 
